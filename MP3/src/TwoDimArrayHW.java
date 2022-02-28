@@ -1,9 +1,9 @@
-package com.mycompany.mp3;
+package MP3.src;
 
-import static com.mycompany.mp3.ReverseArrayClassHW.*;
-import static com.mycompany.mp3.TwoDimArrayOperationsHW.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import MP3.src.revArr.*;
+import MP3.src.twoDOps.*;
 
 /**
  *
@@ -56,7 +56,7 @@ public class TwoDimArrayHW {
         System.out.println(); //Some whitespace
         System.out.println();
         
-        printArray(twoDimHW); //print the twoDimHW array
+        twoDOps.printArray(twoDimHW); //print the twoDimHW array
         
         System.out.println(); //Some whitespace
         System.out.println();
@@ -68,8 +68,8 @@ public class TwoDimArrayHW {
         
         int[][] numbersReverse = new int[NUMROWS][NUMCOLS]; //insantiate the numbersReverse array
         System.out.println("Flipping the array Horizontally:");
-        flipArrayHorizontally(twoDimHW, numbersReverse); //call the flipArrayHorizontally method
-        printArray(numbersReverse); //print the horizontally flipped array
+        revArr.flipArrayHorizontally(twoDimHW, numbersReverse); //call the flipArrayHorizontally method
+        twoDOps.printArray(numbersReverse); //print the horizontally flipped array
         
         System.out.println(); //More whitespace
         System.out.println();
@@ -77,16 +77,18 @@ public class TwoDimArrayHW {
 //        int[][] flipArrVer = new int[NUMROWS][NUMCOLS]; //instantiate the flipArrVer 2d array
         int[][] flipArrVer = new int[NUMROWS][NUMCOLS];
         System.out.println("Flipping the array Vertically:");
-        flipArrayVertically(twoDimHW,flipArrVer);//call the flipArrayVertically method
-        printArray(flipArrVer);//print the resulting flipArrVer array
+        revArr.flipArrayVertically(twoDimHW,flipArrVer);//call the flipArrayVertically method
+        twoDOps.printArray(flipArrVer);//print the resulting flipArrVer array
+
+
         
         System.out.println(); //Whitespace again
         System.out.println();
         
         int[][] reverseArr = new int[NUMROWS][NUMCOLS]; //instantiate the reverseArr 2d array
         System.out.println("Reversing the array:");
-        reverseArray2(twoDimHW);//call the reverseArr method
-        printArray(twoDimHW);//print the resulting array
+        revArr.reverseArray2(twoDimHW);//call the reverseArr method
+        twoDOps.printArray(twoDimHW);//print the resulting array
         
         System.out.println();//whitespace
         System.out.println();
@@ -94,21 +96,21 @@ public class TwoDimArrayHW {
         //to transpose the twoDimHW array, the shape must be flipped (flip numrows&numcols)
         int[][] transpArr = new int[NUMCOLS][NUMROWS];//instantiate the transpArr array
         System.out.println("Transposing the array:");
-        transposeArray(twoDimHW, transpArr);//call the transposeArray method
-        printArray(transpArr);//print the resulting array
+        revArr.transposeArray(twoDimHW, transpArr);//call the transposeArray method
+        twoDOps.printArray(transpArr);//print the resulting array
         
         System.out.println();//whitespace
         System.out.println();
         
         int[][] reverseTranspArr = new int[NUMCOLS][NUMROWS];//instantiate the reverseTranspArr array
         System.out.println("Reversing and transposing the array:");
-        reverseTransposeArray(twoDimHW, reverseTranspArr);//call the reverseTransposeArray method
-        printArray(reverseTranspArr);//print the resulting array
+        revArr.reverseTransposeArray(twoDimHW, reverseTranspArr);//call the reverseTransposeArray method
+        twoDOps.printArray(reverseTranspArr);//print the resulting array
         
         System.out.println();//whitespace
         System.out.println();
         
-        printArray(twoDimHW);//print the original twoDimHW array
+        twoDOps.printArray(twoDimHW);//print the original twoDimHW array
         
         System.out.println();//whitespace
         System.out.println();
@@ -116,25 +118,25 @@ public class TwoDimArrayHW {
         //Each of these print statements prints a various statistic and calls the
         //corresponding method. 
         System.out.println("Total of twoDimHW: " 
-                + getTotal(twoDimHW));
+                + twoDOps.getTotal(twoDimHW));
         System.out.println("Average of twoDimHW: "
-                + getAverage(twoDimHW));
+                + twoDOps.getAverage(twoDimHW));
         System.out.println("Total of row 0 of twoDimHW: "
-                + getRowTotal(twoDimHW,0));
+                + twoDOps.getRowTotal(twoDimHW,0));
         System.out.println("Total of row 1 of twoDimHW: "
-                + getRowTotal(twoDimHW,1));
+                + twoDOps.getRowTotal(twoDimHW,1));
         System.out.println("Total of col 0 of twoDimHW: "
-                + getColumnTotal(twoDimHW,0));
+                + twoDOps.getColumnTotal(twoDimHW,0));
         System.out.println("Total of col 2 of twoDimHW: "
-                + getColumnTotal(twoDimHW,2));
+                + twoDOps.getColumnTotal(twoDimHW,2));
         System.out.println("Highest in row 0 of twoDimHW:"
-                + getHighestInRow(twoDimHW, 0));
+                + twoDOps.getHighestInRow(twoDimHW, 0));
         System.out.println("Highest in row 1 of twoDimHW:"
-                + getHighestInRow(twoDimHW, 1));
+                + twoDOps.getHighestInRow(twoDimHW, 1));
         System.out.println("Lowest in row 0 of twoDimHW:"
-                + getLowestInRow(twoDimHW, 0));
+                + twoDOps.getLowestInRow(twoDimHW, 0));
         System.out.println("Lowest in row 1 of twoDimHW:"
-                + getLowestInRow(twoDimHW, 1));
+                + twoDOps.getLowestInRow(twoDimHW, 1));
     }
     
     

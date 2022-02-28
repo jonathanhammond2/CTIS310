@@ -1,12 +1,12 @@
-package com.mycompany.mp3;
+package MP3.src;
 
 /**
  *
  * @author jonn
  */
-public class TwoDimArrayOperationsHW {
+public class twoDOps {
 
-    public TwoDimArrayOperationsHW() {
+    public twoDOps() {
     }
     
     

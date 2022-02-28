@@ -1,12 +1,12 @@
-package com.mycompany.mp3;
+package MP3.src;
 
 /**
  *
  * @author jonn
  */
-public class ReverseArrayClassHW {
+public class revArr {
     int[][] twoDimHW;
-    public ReverseArrayClassHW(int[][]arr) {
+    public revArr(int[][]arr) {
         this.twoDimHW = arr;
     }
 
